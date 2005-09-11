@@ -1,0 +1,27 @@
+--- War3DSource/Main.cpp.orig	2005-09-11 01:12:53.000000000 +0200
++++ War3DSource/Main.cpp	2005-09-11 01:33:17.000000000 +0200
+@@ -27,6 +27,8 @@
+ #include <math.h>
+ #include <stdio.h>
+ 
++#include <pwd.h>
++
+ 
+ #ifdef _WIN32 // Windows
+ 
+@@ -106,7 +108,14 @@
+ 
+   glutInit(&argc, argv);
+ 
+-  configuracion::leerConfig ("War3D.conf");
++  std::string confname;
++  struct passwd *pwent = getpwuid(getuid());
++  if ( pwent && pwent->pw_dir ) {
++	  confname = std::string(pwent->pw_dir) + "/.War3D.conf";
++  } else {
++	  confname = "War3D.conf";
++  }
++  configuracion::leerConfig (confname);
+ 
+   SetupGL();
+   SetupRC(); //Inicia la iluminacion y algunas otras cosas
