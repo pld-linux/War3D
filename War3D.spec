@@ -1,5 +1,5 @@
 Summary:	War3D - strategy game
-Summary(pl):	War3D - gra strategiczna
+Summary(pl.UTF-8):   War3D - gra strategiczna
 Name:		War3D
 Version:	0.08.90
 %define	_snap	20050909
@@ -26,10 +26,10 @@ A 3D strategy game.
 
 Warning: this game is not internationalized, everything is in Spanish.
 
-%description -l pl
+%description -l pl.UTF-8
 Gra strategiczna 3D.
 
-Uwaga: nie jest umiêdzynarodowiona, wszystko jest po hiszpañsku.
+Uwaga: nie jest umiÄ™dzynarodowiona, wszystko jest po hiszpaÅ„sku.
 
 %prep
 %setup -q -n %{name}Source
