@@ -1,5 +1,5 @@
 Summary:	War3D - strategy game
-Summary(pl.UTF-8):   War3D - gra strategiczna
+Summary(pl.UTF-8):	War3D - gra strategiczna
 Name:		War3D
 Version:	0.08.90
 %define	_snap	20050909
